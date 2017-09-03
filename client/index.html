@@ -7,6 +7,7 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -25,8 +26,38 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
+
+      <form>
+        Room:
+        <select id="mySelect">
+        </select>
+      </form>
+
+      <div class="window-popup">
+        <div class="wp-content">
+        <br>
+        <input class="roomInput" type="text" placeholder="Type a new room name">
+        <br>
+        <br>
+        <div class="addnewRoom">Add</div>
+        <a href='#' id="button-popup-close">Close</a>
+        </div>
+      </div>
+
+      <div class="inputForm">
+       <div><input class= "messageText" type="text" placeholder="Type a new message"></div>
+       <div class="box">Submit</div>
+      <div class="spinner"><img class="spinnerImg" src="images/spiffygif_46x46.gif"/></div>
+      </div>
+
+
     </div>
-    <div id="chats"></div>
+    <div id="chats">
+    </div>
+    <script>
+    $(function() {
+      app.init();
+    })
+    </script>
   </body>
 </html>

@@ -14,6 +14,12 @@ body {
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
 }
+#chats {
+  height: 570px;
+  position: relative;;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
 #main h1 {
     margin-top: 0;
@@ -76,11 +82,10 @@ form input[type=text] {
 .spinner {
     float: right;
     height: 46px;
-    margin-bottom: 5px;
 }
 
 .spinner img {
-    padding: 10px;
+    padding-left: 2px;
 }
 
 .friend {
@@ -88,3 +93,122 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+.messageText {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #999;
+  position: relative;
+  margin-left: 20px;
+  width:280px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.messageBox {
+  background-color: #eee;
+  min-height: 50px;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.messageUserName {
+  font-weight: 800;
+}
+
+.messageUserText {
+  padding-top: 5px;
+  word-wrap: break-word;
+
+}
+
+.roomInput{
+  text-align: center;
+  border: 2px solid #999;
+  position: relative;
+  margin-left: 20px;
+  width:200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+input:focus {
+  border-color: #4285f4;
+}
+
+.inputForm>* {
+  display: inline-block;
+}
+.addnewRoom{
+    text-align: center;
+    position: relative;
+    width: 60px;
+    height: 20px;
+    background:white;
+    color:#222222;
+    -webkit-transition: all .5s;
+    -webkit-border-radius:5px;
+    margin-left: 110px;
+    box-shadow:  1px 1px 5px rgba(0,0,0,.5),
+                    0px 0px 0px 1px rgba(0,0,0,.1);
+}
+
+.newRoom {
+  background: #ddd;
+}
+
+.box{
+    font-weight: bold;
+    margin: auto;
+    -webkit-transition: all .5s;
+    -webkit-border-radius:5px;
+    line-height:42px;
+    color:#222222;
+    background: white;
+    width:100px;
+    text-align: center;
+    box-shadow:  1px 1px 5px rgba(0,0,0,.5),
+                    0px 0px 0px 1px rgba(0,0,0,.1);
+}
+.box:hover{
+    background: #ddd;
+}
+.window-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0,0,0,0,1);
+    top: 0;
+    left:0;
+    display: none;
+}
+.wp-content{
+    width: 300px;
+    height: 150px;
+    background-color: #999;
+    border-radius: 3px;
+    position: absolute;
+    left: 30%;
+    top:25%;
+}
+.wp-content a{
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 5px;
+}
+
+.befriended {
+  color: lightblue;
+}
